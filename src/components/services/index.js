@@ -1,69 +1,64 @@
 import React from 'react';
 
-export default () => {
+var style = {
+    width: "90%",
+    height: "50%",
+}
+
+function Product(){
+    const equipment = [
+        {title: 'IR輸送式乾燥機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: 'LSR射出機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '固態真空油壓機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '裁切機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '印刷台', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '中型平面網印機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '電動跑檯式退料網印機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '混料機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '烤箱', img:'/assets/imgs/logo.png',content:'XXX...'},
+    ]
+    const measurer = [
+        {title: '壽命測試機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '荷重曲線量測儀器', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '放大檢視鏡', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '耐摩擦試驗機', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '游標卡尺', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '硬度計', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '厚薄規', img:'/assets/imgs/logo.png',content:'XXX...'},
+        {title: '厚薄規', img:'/assets/imgs/logo.png',content:'XXX...'},
+        
+    ]
+
     return (
         
         <div class="container pt-30 ">
+            <div class="d-flex justify-content-center"><h1><b>生產設備</b></h1></div>
+            
             <div class="row pt-3 justify-content-center">
-                <div class="col-sm-3 m-1">
-                <h3>工業應用</h3>
-                <h4>Silicon</h4>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-
-                <p>抗老化,耐磨,彈性佳</p>
-                </div>
-                <div class="col-sm-3 m-1">
-
-                <h3>工業應用</h3>
-                <h4>silicon O-Ring</h4>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>耐酸鹼,耐溶劑,抗靜電</p>
-                </div>
-                <div class="col-sm-3 m-1">
-                <h3>工業應用</h3>
-                <h4>silicon防水圈</h4>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>耐酸鹼,耐溶劑,抗靜電</p>
-                </div>
+                {equipment.map( equi => {
+                        return (
+                            <div class="col-sm-3 m-1 ">
+                            <h4>{equi.title}</h4>
+                            <img class="img-thumbnail" style={style} src={equi.img}></img>
+                            <p>{equi.content}</p>
+                            </div>
+                        )
+                    })}
             </div>
-
+            <div class="d-flex justify-content-center"><h1><b>測量儀器</b></h1></div>
             <div class="row pt-3 justify-content-center">
-                <div class="col-sm-3  m-1">
-                <h3>醫療科技</h3>
-                <h4>silicon醫療矽膠</h4>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>無毒,無味,耐高溫</p>
-                </div>
-                <div class="col-sm-3  m-1">
-                <h3>生活科技</h3>
-                <h4>silicon醫療鍵盤</h4>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>無毒,無味,防塵</p>
-                </div>
-                <div class="col-sm-3  m-1">
-                <h3>3C製品</h3>
-                <h4>silicon果凍套</h4>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>延展性佳,防水性佳,質地柔軟</p>
-                </div>
-            </div>
-            <div class="row pt-3 justify-content-center">
-                <div class="col-sm-3  m-1">
-                <h3>運動用品</h3>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>Lorem ipsum dolor..</p>
-                </div>
-                <div class="col-sm-3  m-1">
-                <h3>silicon水上用品</h3>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>耐用,舒適,透光性佳</p>
-                </div>
-                <div class="col-sm-3  m-1">
-                <h3>Column 3</h3>
-                <img class="img-thumbnail" src="/assets/imgs/communication-3.jpg"></img>
-                <p>Lorem ipsum dolor..</p>
-                </div>
+                {measurer.map( mea => {
+                        return (
+                            <div class="col-sm-3 m-1 ">
+                            <h4>{mea.title}</h4>
+                            <img class="img-thumbnail" style={style} src={mea.img}></img>
+                            <p>{mea.content}</p>
+                            </div>
+                        )
+                    })}
             </div>
         </div>
     )
 }
+
+export default Product;

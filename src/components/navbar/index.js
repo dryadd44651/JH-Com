@@ -22,9 +22,9 @@ const navbar = () => {
                 <NavDropdown title="Product" id="collasible-nav-dropdown">
                     <NavDropdown.Item href="/product">產品</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="/action/3.2">工業應用</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">醫療科技</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.4">生活科技</NavDropdown.Item>
+                    <NavDropdown.Item href="/product/industry">工業應用</NavDropdown.Item>
+                    <NavDropdown.Item href="/product/medical">醫療科技</NavDropdown.Item>
+                    <NavDropdown.Item href="/product/life">生活科技</NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link as={Link} to="/about">About</Nav.Link>
                 <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
