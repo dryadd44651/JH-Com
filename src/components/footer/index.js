@@ -8,13 +8,14 @@ var style = {
     left: "0",
     bottom: "0",
     width: "100%",
-    height: '110px',
+    height: '5rem',
+    
 }
 //let style  fixed under the phantom
 var phantom = {
     display: 'block',
     width: '100%',
-    height: '110px',
+    height: '5rem',
 }
 
 function Footer() {
@@ -22,9 +23,9 @@ function Footer() {
         <div>
             <div style={phantom} />
             <div style={style}>
-            <p>Email: andy@xxx.com</p>
-            <p>Address: 新北市新莊區新樹路345巷1、3號</p>
-            <p>Phone: XXXXXX</p>
+            Email: andy@xxx.com<br></br>
+            Address: 新北市新莊區新樹路345巷1、3號<br></br>
+            Phone: XXXXXX<br></br>
             </div>
         </div>
     )
