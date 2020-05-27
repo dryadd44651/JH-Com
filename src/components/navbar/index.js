@@ -50,6 +50,7 @@ const navbar = () => {
                     產品
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a className="dropdown-item" href="/product/">全部產品</a>
                     <a className="dropdown-item" href="/product/industry">工業應用</a>
                     <a className="dropdown-item" href="/product/medical">醫療科技</a>
                     <a className="dropdown-item" href="/product/life">生活科技</a>
